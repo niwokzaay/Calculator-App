@@ -1,0 +1,283 @@
+
+
+
+function appendMe(val)
+{
+    //alert(val);
+    //document.getElementById("disp").value+=val;
+    //alert(val);
+if(document.getElementById("disp").value=='0')
+{
+  document.getElementById("disp").value=val;
+}
+else if(val=='.' && document.getElementById("disp").value.indexOf('.')>-1) //do nothing, because we already have a decimal point
+{
+
+}
+else //in any other case, we just append
+{
+  document.getElementById("disp").value+=val;
+}
+    }
+function clearAll()
+{
+    //alert(val);
+    document.getElementById("disp").value=0;
+    var param1 = 0;
+    var param2 = 0;
+}
+
+function plusMinus()
+{
+    document.getElementById("disp").value=(document.getElementById("disp").value*-1);
+}
+function setOp(val)
+{
+//first, set aside the initial value as entered
+document.getElementById("param1").value=document.getElementById("disp").value;
+
+//next, clear out that first number entered
+document.getElementById("disp").value=0;
+
+//finally, store the operation
+document.getElementById("operator").value=val;
+} 
+function calcMe()
+{
+var param1 = document.getElementById("param1").value;
+var operator = document.getElementById("operator").value;
+var param2 = document.getElementById("disp").value;
+
+document.getElementById("disp").value = eval(param1+operator+param2); 
+}
+
+function isNum()
+{
+//start as true
+var isN = true;
+
+if(isNaN(document.getElementById("disp").value))
+{
+isN=false;
+alert("Non-numeric Data!");
+}
+
+return isN;
+}
+
+
+function set_getMem()
+{
+var memvalue;
+//{
+//isNum()
+//}
+if(memvalue == null ) //nothing in there, so set it
+    {
+    memvalue = document.getElementById("disp").value;
+    }
+
+else //something in there, so display it
+    {
+    document.getElementById("disp").value = memvalue;
+    }
+}
+
+
+
+
+window.addEventListener("load", function() {
+    stone.style.backgroundColor = "orange";
+    sttwo.style.backgroundColor = "gray";
+    sthree.style.backgroundColor = "gray";
+    panel.style.backgroundColor = "aqua";
+});
+
+
+
+let stone = document.getElementById("ts1");
+let sttwo = document.getElementById("ts2");
+let sthree = document.getElementById("ts3");
+let delet = document.getElementById("delet");
+let reset = document.getElementById("reset");
+let OP = document.getElementById("OP");
+let disp = document.getElementById("disp");
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let four = document.getElementById("four");
+let five = document.getElementById("five");
+let six = document.getElementById("six");
+let seven = document.getElementById("seven");
+let eight = document.getElementById("eight");
+let nine = document.getElementById("nine");
+let zero = document.getElementById("zero");
+let plus = document.getElementById("plus");
+let minus = document.getElementById("minus");
+let slash = document.getElementById("slash");
+let cross = document.getElementById("cross");
+let point = document.getElementById("point");
+let stitle = document.getElementById("stitle");
+let sptitle = document.getElementById("sptitle");
+let tn1 = document.getElementById("tn1");
+let tn2 = document.getElementById("tn2");
+let tn3 = document.getElementById("tn3");
+let equal = document.getElementById("equal");
+let themeselect = document.getElementById("tselect");
+let MAin = document.getElementById("main");
+
+
+window.addEventListener("load", function() {
+    stone.style.backgroundColor = "#aa352b";
+    sttwo.style.backgroundColor = "gray";
+    sthree.style.backgroundColor = "gray";
+    panel.style.backgroundColor = "aqua";
+});
+
+//first theme preference
+stone.addEventListener("click", () => {
+    stone.style.backgroundColor = "#aa352b";
+    sttwo.style.backgroundColor = "gray";
+    sthree.style.backgroundColor = "gray";
+    document.body.style.backgroundColor = "#364f71";
+    one.style.backgroundColor = "white";
+    one.style.color = "black";
+    two.style.backgroundColor = "white";
+    two.style.color = "black";
+    three.style.backgroundColor = "white";
+    three.style.color = "black";
+    four.style.backgroundColor = "white";
+    four.style.color = "black";
+    five.style.backgroundColor = "white";
+    five.style.color = "black";
+    six.style.backgroundColor = "white";
+    six.style.color = "black";
+    seven.style.backgroundColor = "white";
+    seven.style.color = "black";
+    eight.style.backgroundColor = "white";
+    eight.style.color = "black";
+    nine.style.backgroundColor = "white";
+    nine.style.color = "black";
+    zero.style.backgroundColor = "white";
+    zero.style.color = "black";
+    plus.style.backgroundColor = "white";
+    plus.style.color = "black";
+    minus.style.backgroundColor = "white";
+    minus.style.color = "black";
+    slash.style.backgroundColor = "white";
+    slash.style.color = "black";
+    cross.style.backgroundColor = "white";
+    cross.style.color = "black";
+    point.style.backgroundColor = "white";
+    point.style.color = "black";
+    OP.style.backgroundColor = "#0b2631";
+    themeselect.style.backgroundColor = "#0b2631";
+    disp.style.backgroundColor = "#0b2631";
+    disp.style.color = "white";
+    equal.style.backgroundColor = "#aa352b";
+    equal.style.color = "white";
+    MAin.style.backgroundColor = "transparent";
+    delet.style.backgroundColor = "#414f62";
+    delet.style.color = "white";
+    reset.style.backgroundColor = "#414f62";
+    reset.style.color = "white";
+});
+
+//second theme preference
+sttwo.addEventListener("click", () => {
+    stone.style.backgroundColor = "gray";
+    sttwo.style.backgroundColor = "orange";
+    sthree.style.backgroundColor = "gray";
+    document.body.style.backgroundColor = "whitesmoke";
+    one.style.backgroundColor = "white";
+    one.style.color = "black";
+    two.style.backgroundColor = "white";
+    two.style.color = "black";
+    three.style.backgroundColor = "white";
+    three.style.color = "black";
+    four.style.backgroundColor = "white";
+    four.style.color = "black";
+    five.style.backgroundColor = "white";
+    five.style.color = "black";
+    six.style.backgroundColor = "white";
+    six.style.color = "black";
+    seven.style.backgroundColor = "white";
+    seven.style.color = "black";
+    eight.style.backgroundColor = "white";
+    eight.style.color = "black";
+    nine.style.backgroundColor = "white";
+    nine.style.color = "black";
+    zero.style.backgroundColor = "white";
+    zero.style.color = "black";
+    plus.style.backgroundColor = "white";
+    plus.style.color = "black";
+    minus.style.backgroundColor = "white";
+    minus.style.color = "black";
+    slash.style.backgroundColor = "white";
+    slash.style.color = "black";
+    cross.style.backgroundColor = "white";
+    cross.style.color = "black";
+    point.style.backgroundColor = "white";
+    point.style.color = "black";
+    OP.style.backgroundColor = "#fef2ea";
+    themeselect.style.backgroundColor = "#fef2ea";
+    disp.style.backgroundColor = "#fef2ea";
+    disp.style.color = "black";
+    equal.style.backgroundColor = "orange";
+    equal.style.color = "white";
+    MAin.style.backgroundColor = "transparent";
+    delet.style.backgroundColor = "#164852";
+    delet.style.color = "white";
+    reset.style.backgroundColor = "#164852";
+    reset.style.color = "white";
+});
+
+
+//third theme preference
+sthree.addEventListener("click", () => {
+    stone.style.backgroundColor = "gray";
+    sttwo.style.backgroundColor = "gray";
+    sthree.style.backgroundColor = "#29f4ff";
+    document.body.style.backgroundColor = "#32004C";
+    one.style.backgroundColor = "#65009b";
+    one.style.color = "yellow";
+    two.style.backgroundColor = "#65009b";
+    two.style.color = "yellow";
+    three.style.backgroundColor = "#65009b";
+    three.style.color = "yellow";
+    four.style.backgroundColor = "#65009b";
+    four.style.color = "yellow";
+    five.style.backgroundColor = "#65009b";
+    five.style.color = "yellow";
+    six.style.backgroundColor = "#65009b";
+    six.style.color = "yellow";
+    seven.style.backgroundColor = "#65009b";
+    seven.style.color = "yellow";
+    eight.style.backgroundColor = "#65009b";
+    eight.style.color = "yellow";
+    nine.style.backgroundColor = "#65009b";
+    nine.style.color = "yellow";
+    zero.style.backgroundColor = "#65009b";
+    zero.style.color = "yellow";
+    plus.style.backgroundColor = "#65009b";
+    plus.style.color = "yellow";
+    minus.style.backgroundColor = "#65009b";
+    minus.style.color = "yellow";
+    slash.style.backgroundColor = "#65009b";
+    slash.style.color = "yellow";
+    cross.style.backgroundColor = "#65009b";
+    cross.style.color = "yellow";
+    point.style.backgroundColor = "#65009b";
+    point.style.color = "yellow";
+    OP.style.backgroundColor = "#240137";
+    themeselect.style.backgroundColor = "#240137";
+    disp.style.backgroundColor = "#240137";
+    disp.style.color = "yellow";
+    equal.style.backgroundColor = "#29f4ff";
+    equal.style.color = "black";
+    MAin.style.backgroundColor = "transparent";
+    delet.style.backgroundColor = "#8700CB";
+    delet.style.color = "white";
+    reset.style.backgroundColor = "#8700CB";
+    reset.style.color = "white";
+});

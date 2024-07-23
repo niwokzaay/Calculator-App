@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="_css/main.css" rel="stylesheet" media="screen, projection">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div id="main">
+            <div id="intro">
+                <div id="title">
+                    <p id="ptitle">Niwok Zaay</p>
+                </div>
+                <div id="stitle">
+                    <p id="sptitle">theme</p>
+                </div>
+
+
+                <div id="theme">
+                    <div id="tnumb">
+                        <div id="tn1" value="1">1</div>
+                        <div id="tn2" value="2">2</div>
+                        <div id="tn3" value="3">3</div>
+                    </div>
+                    <div id="tselect">
+                        <div id="ts1"></div>
+                        <div id="ts2"></div>
+                        <div id="ts3"></div>
+                    </div>
+                </div>
+
+            </div>
+                <form id="calcForm">
+                <div id="calc">
+                <input type='hidden' id='param1' value='0' />
+                <input type='hidden' id='operator' value='' />
+
+                    <div id="display">
+                        <input type="text" name="disp" id="disp" class="disp" size="35" value="0">
+                    </div>
+
+                <div id="OP">
+                <div id="buttons">
+                <div class="row1"><br>
+                    <input id="seven" type="button" value="7" onclick="isNum();appendMe(this.value)">
+                    <input id="eight" type="button" value="8" onclick="isNum();appendMe(this.value)">
+                    <input id="nine" type="button" value="9" onclick="isNum();appendMe(this.value)">
+                    <input id="delet" type="button" value="DEL" onclick="clearAll()">
+                    
+                </div>
+                <div class="row2"><br>
+                    <input id="four" type="button" value="4" onclick="isNum();appendMe(this.value)">
+                    <input id="five" type="button" value="5" onclick="isNum();appendMe(this.value)">
+                    <input id="six" type="button" value="6" onclick="isNum();appendMe(this.value)">
+                    <input id="plus" type="button" value="+" onClick="isNum();setOp(this.value)">
+                   
+                </div>
+                <div class="row3"><br>
+                    <input id="one" type="button" value="1" onclick="isNum();appendMe(this.value)">
+                    <input id="two" type="button" value="2" onclick="isNum();appendMe(this.value)">
+                    <input id="three" type="button" value="3" onclick="isNum();appendMe(this.value)">
+                    <input id="minus" type="button" value="-" onClick="isNum();setOp(this.value)">
+                
+                </div>
+                <div class="row4"><br>
+                    <input id="point" type="button" value="." onclick="isNum();appendMe(this.value)">
+                    <input id="zero" type="button" value="0" onclick="isNum();appendMe(this.value)">
+                    <input id="slash" type="button" value="/" onClick="isNum();setOp(this.value)">
+                    <input id="cross" type="button" value="*" onClick="isNum();setOp(this.value)">
+                </div>
+
+                </div>
+                <div class="row5"><br>
+                    <input id="reset" type="button" value="RESRT" onClick="isNum();setOp(this.value)">
+                    <input id="equal" type="button" value="=" onClick="isNum();calcMe()">
+                </div>
+                </div>
+                </div>  
+                </div>
+
+        <script src="js/Main.js"></script>
+
+    </body>
+</html>
